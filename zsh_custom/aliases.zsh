@@ -6,6 +6,7 @@ alias dcul="docker compose up -d && docker compose logs -f"
 
 alias localrc="nano $HOME/.localrc"
 alias aliases="nano $HOME/.aliases"
+alias dotupdate="git -C $HOME/dotfiles pull --recurse-submodules"
 
 if [[ -f "$HOME/.aliases" ]]; then
   source "$HOME/.aliases"
