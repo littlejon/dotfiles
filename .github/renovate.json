@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:best-practices"],
+  "packageRules": [
+    {
+      "description": "Schedule docker and github-tags updates",
+      "matchDatasources": ["github-tags", "docker"],
+      "schedule": ["before 6pm on Sunday"],
+      "automerge": true
+    }
+  ]
+}
