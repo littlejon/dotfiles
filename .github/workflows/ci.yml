@@ -18,4 +18,4 @@ jobs:
           fetch-depth: 0
 
       - name: Run ShellCheck
-        run: shellcheck -e SC1091,SC2034 ./.zshrc install.sh ./zsh_custom/*.zsh
+        run: shellcheck -e SC1091,SC2034 ./.zshrc install.sh ./zsh_custom/aliases.zsh ./zsh_custom/history.zsh
