@@ -1,4 +1,4 @@
-name: renovate
+name: Renovate
 run-name: Run RenovateBot
 
 on:
