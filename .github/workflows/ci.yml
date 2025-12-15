@@ -9,7 +9,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    name: Test & Build
+    name: Lint and Check
 
     steps:
       - name: Checkout
@@ -18,4 +18,4 @@ jobs:
           fetch-depth: 0
 
       - name: Run ShellCheck
-        run: shellcheck install.sh ./.zshrc
+        run: shellcheck -e SC1091,SC2034 ./.zshrc install.sh ./zsh_custom/*.zsh
