@@ -1,11 +1,21 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:best-practices"],
+  "git-submodules": {
+    "enabled": true
+  },
   "packageRules": [
     {
       "description": "Schedule docker and github-tags updates",
       "matchDatasources": ["github-tags", "docker"],
       "schedule": ["before 6pm on Sunday"],
+      "automerge": true
+    },
+    {
+      "description": "Submodule Updates",
+      "matchDatasources": [
+        "git-refs"
+      ],
       "automerge": true
     }
   ]
