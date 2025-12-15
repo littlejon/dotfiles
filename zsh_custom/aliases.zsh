@@ -4,6 +4,9 @@ alias dive="docker run -ti --rm  -v /var/run/docker.sock:/var/run/docker.sock:ro
 alias dc="docker compose"
 alias dcul="docker compose up -d && docker compose logs -f"
 
+alias localrc="nano $HOME/.localrc"
+alias aliases="nano $HOME/.aliases"
+
 if [[ -f "$HOME/.aliases" ]]; then
   source "$HOME/.aliases"
 fi
