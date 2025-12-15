@@ -1,5 +1,9 @@
 #!/usr/bin/env sh?
 
+if [[ -f "$HOME/.localrc" ]]; then
+  source "$HOME/.localrc"
+fi
+
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -64,12 +68,18 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Would you like to use another custom folder than $ZSH/custom?
 export ZSH_CUSTOM=$HOME/dotfiles/zsh_custom
 
+STANDARD_PLUGINS=(git zsh-autosuggestions zsh-syntax-highlighting)
+
+if [[ -f ~/.zshrc.local ]]; then
+    source ~/.zshrc.local
+fi
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting pyenv direnv)
+plugins=("${STANDARD_PLUGINS[@]}" "${LOCAL_PLUGINS[@]}")
 
 source "$ZSH"/oh-my-zsh.sh
 
@@ -102,6 +112,3 @@ source "$ZSH"/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-if [[ -f "$HOME/.localrc" ]]; then
-  source "$HOME/.localrc"
-fi
