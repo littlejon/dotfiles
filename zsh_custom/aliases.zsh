@@ -7,7 +7,7 @@ alias ip="ip --color=auto"
 
 alias localrc='nano $HOME/.localrc'
 alias aliases='nano $HOME/.aliases'
-alias dotupdate='git -C $HOME/dotfiles pull && git -C $HOME/dotfiles submodule update --init --recursive'
+alias dotupdate='git -C $HOME/dotfiles pull && git -C $HOME/dotfiles submodule update --init --recursive && omz reload'
 
 if [[ -f "$HOME/.aliases" ]]; then
   source "$HOME/.aliases"
