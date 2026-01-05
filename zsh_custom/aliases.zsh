@@ -5,6 +5,9 @@ alias dc="docker compose"
 alias dcul="docker compose up -d && docker compose logs -f"
 alias ip="ip --color=auto"
 
+alias du1="du -h -d 1"
+alias sdu1="sudo du -h -d 1"
+
 alias localrc='nano $HOME/.localrc'
 alias aliases='nano $HOME/.aliases'
 alias dotupdate='git -C $HOME/dotfiles pull && git -C $HOME/dotfiles submodule update --init --recursive && omz reload'
